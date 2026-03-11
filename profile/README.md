@@ -30,7 +30,7 @@ We think that's broken.
 </td>
 <td>
 
-**[XDR Snip](https://github.com/Cynerg-IA/xdr-snip)** &mdash; Screenshot tool for Windows 11. Freeze your screen, select a region, get a small JPEG. That's it.
+**[XDR Snip](https://github.com/Cynerg-IA/xdr-snip)** &mdash; Screenshot tool for Windows 11. Freeze your screen, select a region, get a small WebP. That's it.
 
 - **~3MB** single executable. No installer. No runtime. No Electron.
 - **Pure Rust.** Zero garbage collection, zero framework overhead.
