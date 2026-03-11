@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" /> <img src="https://img.shields.io/badge/SolidJS-2c4f7c?style=for-the-badge&logo=solid&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/Tauri-FFC131?style=for-the-badge&logo=tauri&logoColor=black" />
-
 # Cynerg-IA
 
 **One engineer. AI-augmented. Building lean software that does more with less.**
@@ -12,35 +10,52 @@
 
 </div>
 
-## Philosophy
+## The problem
 
-Software has a weight problem. Most teams solve it by adding people. We solve it by choosing better tools.
+The software industry has a weight problem. Screenshot tools ship as 200MB Electron apps. Note-taking needs a cloud subscription. Simple utilities demand frameworks, runtimes, and telemetry you never asked for.
 
-**Cynerg-IA** is a solo software company where AI isn't a feature — it's the workforce. Every line of code is written, reviewed, and deployed through human-AI collaboration at a pace that small teams can't match and large teams won't believe.
+We think that's broken.
 
-### What we build with
+## The proof
 
-| Layer | Choice | Why |
-|-------|--------|-----|
-| **Systems** | Rust | Zero-cost abstractions. No GC. No runtime surprises. |
-| **Frontend** | SolidJS + TypeScript | 8KB runtime. Real reactivity, not virtual DOM theater. |
-| **Desktop** | Tauri | Native shell, web UI. 10x lighter than Electron. |
-| **Data** | PostgreSQL 17 | The database that doesn't need replacing. |
-| **AI Ops** | Claude Code + Custom Orchestration | Autonomous agents that write, test, deploy, and self-correct. |
+<table>
+<tr>
+<td width="120" align="center">
+<br>
+<a href="https://github.com/Cynerg-IA/xdr-snip">
+<img src="https://img.shields.io/badge/XDR_Snip-000?style=for-the-badge&logo=rust&logoColor=white" />
+</a>
+</td>
+<td>
 
-### Principles
+**[XDR Snip](https://github.com/Cynerg-IA/xdr-snip)** -- Screenshot tool for Windows 11. Freeze your screen, select a region, get a small JPEG. That's it.
 
-- **Small footprint** — fewer dependencies, smaller binaries, lower resource consumption
-- **AI-native workflow** — humans architect, AI builds, automation verifies
-- **Lean by design** — no frameworks we don't need, no abstractions we won't use
-- **Ship fast, ship right** — CI/CD pipelines that deploy in minutes, not days
+- **~3MB** single executable. No installer. No runtime. No Electron.
+- **Pure Rust.** Zero garbage collection, zero framework overhead.
+- **HDR-aware.** Captures what you actually see, not a washed-out approximation.
+- **Built in weeks, not months.** Human architecture + AI implementation + autonomous CI/CD.
 
----
+Every screenshot tool on the market ships bloated, phones home, or both. XDR Snip does one thing, does it well, and weighs nothing.
+
+</td>
+</tr>
+</table>
+
+## How we build
+
+| Principle | Practice |
+|-----------|----------|
+| **Small footprint** | Rust, SolidJS (8KB runtime), Tauri. No Electron. No React. |
+| **AI-native** | Humans architect. AI writes, tests, and deploys. Autonomous agents manage the full cycle. |
+| **Zero bloat** | Every dependency is justified. Every binary is measured. |
+| **Ship daily** | CI/CD pipelines that deploy in minutes. No sprint ceremonies. No Jira. |
 
 <div align="center">
 
-*Building the future of software — one commit at a time.*
+---
 
-**France** · [cynerg-ia.com](https://cynerg-ia.com)
+<img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" /> <img src="https://img.shields.io/badge/SolidJS-2c4f7c?style=flat-square&logo=solid&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/Tauri-FFC131?style=flat-square&logo=tauri&logoColor=black" />
+
+**France** &middot; [cynerg-ia.com](https://cynerg-ia.com)
 
 </div>
