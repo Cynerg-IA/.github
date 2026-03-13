@@ -12,13 +12,56 @@
 
 ## The problem
 
-The software industry has a weight problem. Screenshot tools ship as 200MB Electron apps. Note-taking needs a cloud subscription. Simple utilities demand frameworks, runtimes, and telemetry you never asked for.
+The software industry has a weight problem. Screenshot tools ship as 200MB Electron apps. Invoicing needs a cloud subscription. Simple utilities demand frameworks, runtimes, and telemetry you never asked for.
 
-We think that's broken.
+We think that's broken. So we build differently.
 
 ---
 
-## Layer 1 &mdash; XDR Snip
+## What we've built
+
+<div align="center">
+
+| | Metric | |
+|---|--------|---|
+| **69,600+** | lines of production code | Rust + TypeScript + SQL |
+| **816** | commits on main | in 13 days |
+| **178** | releases shipped | continuous delivery |
+| **400+** | pull requests merged | AI-authored, human-verified |
+| **1** | engineer | augmented by autonomous AI agents |
+
+</div>
+
+---
+
+## Projects
+
+### Mission Control &mdash; AI Agent Orchestration Platform
+
+The engine behind everything we ship. Not a copilot. A workforce.
+
+One engineer dispatches autonomous AI agents that read issues, write code, create PRs, run CI, verify deployments, and merge &mdash; without human intervention. The system improves itself through its own pipeline.
+
+**Key capabilities:**
+- **Multi-agent orchestration** &mdash; Opus orchestrators dispatch Sonnet builders in parallel, working in isolated git worktrees
+- **Self-healing pipelines** &mdash; crashed agents are detected, diagnosed, and recovered automatically
+- **Sub-agent awareness** &mdash; watchdog tracks nested agent hierarchies, prevents false-positive kills
+- **Deploy verification** &mdash; CI green is not enough; agents verify live behavior before closing issues
+- **Real-time dashboard** &mdash; token burn rates, agent status, deployment tracking, KPIs
+
+```
+Backend:   Rust (Axum + SQLx) .......... 18,700 LOC across 164 files
+Frontend:  SolidJS + TypeScript ........ 49,200 LOC across 175 files
+Database:  PostgreSQL 17 ............... 58 migrations
+CI/CD:     Gitea Actions, self-hosted runner, Docker
+Agents:    Claude Opus (orchestrator) + Claude Sonnet (builders)
+```
+
+> Mission Control is private. What you see in our public repos is the output: code written, tested, and deployed by autonomous agents coordinated through this platform.
+
+---
+
+### XDR Snip &mdash; Screenshot Tool for Windows
 
 <table>
 <tr>
@@ -30,88 +73,59 @@ We think that's broken.
 </td>
 <td>
 
-**[XDR Snip](https://github.com/Cynerg-IA/xdr-snip)** &mdash; Screenshot tool for Windows 11. Freeze your screen, select a region, get a small WebP. That's it.
+**[XDR Snip](https://github.com/Cynerg-IA/xdr-snip)** &mdash; Freeze your screen, select a region, get a small WebP. That's it.
 
 - **~3MB** single executable. No installer. No runtime. No Electron.
 - **Pure Rust.** Zero garbage collection, zero framework overhead.
 - **HDR-aware.** Captures what you actually see, not a washed-out approximation.
-- **Self-debugging.** Screenshots feed directly into AI prompts for visual QA &mdash; the tool tests itself.
-
-Every screenshot tool on the market ships bloated, phones home, or both. XDR Snip does one thing, does it well, and weighs nothing.
+- **Visual QA pipeline.** Screenshots feed directly into AI agents for autonomous UI validation.
 
 </td>
 </tr>
 </table>
 
-> XDR Snip is the first layer: proof that a useful desktop tool can be built in pure Rust, weigh almost nothing, and ship fast with AI-assisted development. It also serves as our visual QA pipeline &mdash; screenshots captured by the tool feed directly into Claude for autonomous UI validation. Since we implemented this loop, zero visual bugs have shipped.
-
 ---
 
-## Layer 2 &mdash; Mission Control
+### Meridian &mdash; Business OS *(in development)*
 
-<div align="center">
-
-<br>
-
-```
-  One engineer. Multiple AI agents. Full autonomy.
-```
-
-<br>
-
-</div>
-
-**Mission Control** is our internal operations platform &mdash; and the real engine behind everything we ship. It's where AI stops being a copilot and becomes the workforce.
-
-<div align="center">
-
-| Metric | Number |
-|--------|--------|
-| **Commits on main** | 1,000+ |
-| **Issues resolved** | 390+ |
-| **Pull requests merged** | 400+ |
-| **Time to build** | 11 days |
-| **Engineers** | 1 |
-
-</div>
-
-### What it does
-
-- **Autonomous agent orchestration.** Spawn AI agents that read issues, write code, create PRs, run CI, and merge &mdash; without human intervention.
-- **Multi-agent coordination.** Opus orchestrators dispatch Sonnet builders in parallel. Agents work in isolated worktrees. No conflicts. No merge hell.
-- **Self-healing pipelines.** Crashed agent? The system detects it, diagnoses the failure, and spawns a recovery agent. Automatically.
-- **Real-time operations dashboard.** Token burn rates, deployment tracking, agent status, CI health &mdash; all in one place.
-- **Built with its own tools.** Mission Control deploys itself through its own agent pipeline. The system improves the system.
-
-### The stack
-
-```
-Backend:   Rust + Axum + SQLx + PostgreSQL 17
-Frontend:  SolidJS + TypeScript + Vite
-Daemon:    Rust service managing Claude Code agent lifecycles
-CI/CD:     Gitea Actions, self-hosted runner, Docker deployment
-Agents:    Claude Opus (orchestrator) + Claude Sonnet (builders)
-```
-
-> Mission Control is private. What you see here is the output: repositories built, tested, and deployed by autonomous agents coordinated through a platform that one person built in under two weeks.
+Desktop-first invoicing and accounting for French micro-entrepreneurs. Tauri + Rust + SolidJS + PostgreSQL. Offline-first, NF 525 compliant, designed to replace cloud SaaS with a self-hosted alternative that costs nothing to run.
 
 ---
 
 ## How we build
 
-| Principle | Practice |
-|-----------|----------|
-| **Small footprint** | Rust, SolidJS (8KB runtime), Tauri. No Electron. No React. |
-| **AI-native** | Humans architect decisions. AI writes, tests, and deploys. Agents manage the full cycle. |
-| **Zero bloat** | Every dependency is justified. Every binary is measured. |
-| **Ship daily** | CI/CD pipelines that deploy in minutes. No sprint ceremonies. No Jira. |
-| **Verify everything** | Autonomous QA via Playwright + visual screenshot validation. CI green is not enough. |
-
 <div align="center">
+
+| Principle | In practice |
+|-----------|-------------|
+| **AI-native development** | Humans architect. AI agents write, test, deploy, and verify. Full autonomy from issue to merge. |
+| **Small footprint** | Rust, SolidJS (8KB runtime), Tauri. No Electron. No React. Every dependency justified. |
+| **Ship continuously** | 178 releases in 13 days. CI/CD pipelines that build, test, and deploy in minutes. |
+| **Verify everything** | Agents verify live deployments, not just CI status. Playwright + visual QA. "It compiles" is not "it works." |
+| **Self-hosted first** | Gitea, PostgreSQL, Docker, self-hosted CI runners. Data stays where it belongs. |
+| **Security by default** | OWASP Top 10 baseline. Zero trust. Parameterized SQL only. Defense in depth. |
+
+</div>
 
 ---
 
-<img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" /> <img src="https://img.shields.io/badge/SolidJS-2c4f7c?style=flat-square&logo=solid&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/Tauri-FFC131?style=flat-square&logo=tauri&logoColor=black" /> <img src="https://img.shields.io/badge/Claude-191919?style=flat-square&logo=anthropic&logoColor=white" />
+## The Cynerg-IA Way
+
+Our operating philosophy is codified in **10 strategic playbooks** covering decisions, architecture, security, quality, project management, business structure, infrastructure, risk, AI operations, and financial discipline &mdash; plus **6 cross-cutting principles** and **50+ deep-dive articles**.
+
+Every agent we spawn, every PR we merge, every system we deploy follows these principles. They're not aspirational. They're enforced by CI gates, hooks, and automated verification.
+
+<div align="center">
+
+`X1` Earned Trust &middot; `X2` Project Hierarchy &middot; `X3` Systems Over Discipline &middot; `X4` Assumption Is Not Knowledge &middot; `X5` Output Is Not Outcome &middot; `X6` Verification Is Not Optional
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" /> <img src="https://img.shields.io/badge/SolidJS-2c4f7c?style=flat-square&logo=solid&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/Tauri-FFC131?style=flat-square&logo=tauri&logoColor=black" /> <img src="https://img.shields.io/badge/Claude-191919?style=flat-square&logo=anthropic&logoColor=white" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/Gitea-609926?style=flat-square&logo=gitea&logoColor=white" />
 
 **France** &middot; [cynerg-ia.com](https://cynerg-ia.com)
 
