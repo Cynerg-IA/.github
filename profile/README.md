@@ -92,6 +92,45 @@ Desktop-first invoicing and accounting for French micro-entrepreneurs. Tauri + R
 
 ---
 
+## ACID Properties
+
+The same guarantees you expect from your database, applied to how you build software.
+
+<table>
+<tr>
+<td width="50" align="center"><h3>A</h3></td>
+<td>
+<strong>Air-gapped</strong><br>
+Self-hosted. Data sovereign. Runs on your hardware &mdash; no cloud dependency, no vendor lock-in, no third party between you and your code. Works offline. Works air-gapped. Works yours.
+</td>
+</tr>
+<tr>
+<td width="50" align="center"><h3>C</h3></td>
+<td>
+<strong>Chirurgical</strong><br>
+Right model for the right task. Opus orchestrates strategy. Sonnet builds features. Haiku watches for drift. Not one-size-fits-all &mdash; surgical precision in model assignment, token spend, and task routing.
+</td>
+</tr>
+<tr>
+<td width="50" align="center"><h3>I</h3></td>
+<td>
+<strong>Instrumented</strong><br>
+Every agent action traced. Every token counted. Every deploy verified live. Full observability from spawn to merge &mdash; not "it compiled," but "it works in production, and here's the proof."
+</td>
+</tr>
+<tr>
+<td width="50" align="center"><h3>D</h3></td>
+<td>
+<strong>Defensible</strong><br>
+Capabilities that survive commoditization. Agent lifecycle management, cost intelligence, self-healing recovery, sub-agent awareness &mdash; the hard problems that SaaS copilots skip.
+</td>
+</tr>
+</table>
+
+> It started with a screenshot tool. 3MB, pure Rust, zero bloat. Then we asked: what if we applied the same discipline to the entire development process? The answer is Mission Control.
+
+---
+
 ## How we build
 
 <div align="center">
